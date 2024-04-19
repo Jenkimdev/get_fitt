@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    background: url('media/homepage_background.jpg') no-repeat center center fixed;
+    background-position: top right;
+    background: url('/media/homepage_background.jpg') no-repeat;
     background-size: cover;
     height: calc(100vh - 164px);
     color: rgb(59, 58, 58);
@@ -28,7 +29,7 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: rgb(75, 75, 75);
     color: white;
     min-width: 260px;
 }
@@ -49,7 +50,11 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: #000000 !important;
+}
+
+.hero-text {
+    color: antiquewhite;
 }
 
 .border-black {
