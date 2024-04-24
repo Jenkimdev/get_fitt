@@ -17,9 +17,9 @@
                 Clothing
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Trousers</a>
-                <a href="" class="dropdown-item">Shirts &amp; T-Shirts</a>
-                <a href="" class="dropdown-item">All Clothing</a>
+                <a href="{% url 'products' %}?category=trousers" class="dropdown-item">Trousers</a>
+                <a href="{% url 'products' %}?category=shirts_and_tshirts," class="dropdown-item">Shirts &amp; T-Shirts</a>
+                <a href="{% url 'products' %}?category=trousers,shirts_and_tshirts" class="dropdown-item">All Clothing</a>
             </div>
         </li>
 
@@ -28,11 +28,11 @@
                 Gym Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Treadmills</a>
-                <a href="" class="dropdown-item">Exercise Bikes</a>
-                <a href="" class="dropdown-item">Rowing Machines</a>
-                <a href="" class="dropdown-item">Weights &amp; Benches</a>
-                <a href="" class="dropdown-item">All Equipment</a>
+                <a href="{% url 'products' %}?category=treadmills" class="dropdown-item">Treadmills</a>
+                <a href="{% url 'products' %}?category=exercise_bikes" class="dropdown-item">Exercise Bikes</a>
+                <a href="{% url 'products' %}?category=rowing_machines" class="dropdown-item">Rowing Machines</a>
+                <a href="{% url 'products' %}?category=weights_and_benches" class="dropdown-item">Weights &amp; Benches</a>
+                <a href="{% url 'products' %}?category=treadmills,exercise_bikes,rowing_machines,weights_and_benches" class="dropdown-item">All Equipment</a>
 
             </div>
             </li>
