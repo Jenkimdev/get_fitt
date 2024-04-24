@@ -3,15 +3,14 @@ html {
 }
 
 body {
-    background-position: top right;
-    background: url('/media/homepage_background.jpg') no-repeat;
+    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: rgb(59, 58, 58);
-    font-family: 'lato';
-
+    color: #ffffff;
+    font-family: 'Lato';
 }
 
+/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -29,13 +28,13 @@ body {
 }
 
 .shop-now-button {
-    background: rgb(75, 75, 75);
+    background: rgb(71, 71, 71);
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: rgb(0, 0, 0);
     color: white;
 }
 
@@ -63,25 +62,25 @@ body {
 }
 
 .text-black {
-    color: #000000 !important;
-}
-
-.hero-text {
-    color: antiquewhite;
+    color: #000 !important;
 }
 
 .border-black {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #000 !important;
+}
+
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
@@ -97,7 +96,9 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -125,7 +126,7 @@ a.category-badge > span.badge:hover {
     }
 }
 
-/* add padding to the top when navbar is collapsed on mobile */
+/* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
