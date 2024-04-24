@@ -3,7 +3,9 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    background: url('media/homepage_background.jpg') no-repeat center center fixed;
+    background-position: top right;
+    background: url('/media/homepage_background.jpg') no-repeat;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #000000;
