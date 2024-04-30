@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-&%0gtwa9==25#u7$4hx_mo*6y-f&9bvug+m=i8f$@-49ad$97$
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-jenkimdev-getfitt-mgvg3sz7ld9.ws-eu110.gitpod.io'
+    'get-fitt.herokuapp.com', 'localhost'
 ]
 
 
@@ -120,12 +121,17 @@ WSGI_APPLICATION = 'get_fitt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
