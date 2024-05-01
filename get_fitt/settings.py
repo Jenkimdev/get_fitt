@@ -126,7 +126,7 @@ WSGI_APPLICATION = 'get_fitt.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL', 'x'))
     }
 else:
     DATABASES = {
@@ -216,7 +216,7 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'gbp'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'x')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'x')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', 'x')
 DEFAULT_FROM_EMAIL = 'getfitt@example.com'
