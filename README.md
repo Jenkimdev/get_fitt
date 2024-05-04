@@ -331,7 +331,7 @@ else:
 
 #### Deploying to Heroku
 
-1. Create a Procfile in your app in the root directory with the following content `web: gunicorn pizzatheaction.wsgi:application` and a blank line at the end.
+1. Create a Procfile in your app in the root directory with the following content `web: gunicorn get-fitt.wsgi:application` and a blank line at the end.
 2. Log in to Heroku using the GitPod terminal using the command `Heroku login`` and enter your Heroku email and password
   - if you have 2 factor authentication set up you will need to use `Heroku login -i` followed by your email and your Heroku API key as the password which you can find in your account settings on Heroku
 4. Temporarily disable Heroku from collecting static files during deployment using the command `heroku config:set DISABLE_COLLECTSTATIC=1 --app heroku-app-name`
