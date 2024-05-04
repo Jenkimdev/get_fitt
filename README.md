@@ -143,7 +143,104 @@ Python
 ---
 ## Testing
 ---
+### Validation Testing
+---
 
+#### HTML Validation
+Each section of the site was tested using the [W3C HTML Validator](https://validator.w3.org/#validate_by_input) using the text area of the direct input. Here are the results:
+
+|Feature|Expected Outcome|Test Performed|Result|Pass/Fail|
+|---|---|---|---|---|
+|Home|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+|Products|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+|View Product|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+|Add Product|Pass with no errors|HTML passed through W3C HTML Validator|Duplicate ID error - Resolved|Pass|
+|Edit Product|Pass with no errors|HTML passed through W3C HTML Validator|Duplicate ID error - Resolved|Pass|
+|View Brands|Pass with no errors|HTML passed through W3C HTML Validator|href error on Accordion - Resolved|Pass|
+|View Categories|Pass with no errors|HTML passed through W3C HTML Validator|href error on Accordion - Resolved|Pass|
+|Profile|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+|Add Product|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+|Edit Product|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+|Basket|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+|Checkout|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+|Checkout Success|Pass with no errors|HTML passed through W3C HTML Validator|No Errors|Pass|
+
+#### CSS Validation
+
+I ran the CSS through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/):
+
+|CSS File|Expected Outcome|Test Performed|Result|Pass/Fail|
+|---|---|---|---|---|
+|base.css|Pass with no errors|CSS passed through W3C CSS Validator|No Errors|Pass|
+
+#### JavaScript Linting
+
+The JavaScript in this project is split between small scripts at the bottom of most templates or in the case of the checkout in a standalone .js file. Apart from a few missing semi-colons there were no evident errors in the code.
+
+|Feature|Expected Outcome|Test Performed|Result|Pass/Fail|
+|---|---|---|---|---|
+|Basket|Pass with no errors|JavaScript passed through JSHint|No Errors|Pass|
+|Add Product|Pass with no errors|JavaScript passed through JSHint|No Errors|Pass|
+|View Product|Pass with no errors|JavaScript passed through JSHint|No Errors|Pass|
+|Checkout|Pass with no errors|JavaScript passed through JSHint|No Errors|Pass|
+|Edit Product|Pass with no errors|JavaScript passed through JSHint|No Errors|Pass|
+|All Products|Pass with no errors|JavaScript passed through JSHint|No Errors|Pass|
+
+#### Python Linting
+
+All Python code was passed through the [CI Python Linter](https://pep8ci.herokuapp.com/) with no major errors. There were a few lines that were ovee 80 characters, but these were easily resolved.
+
+|File Name|App|Expected Outcome|Test Performed|Result|Pass/Fail|
+|---|---|---|---|---|---|
+|apps.py|Basket|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|contexts.py|Basket|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|urls.py|Basket|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|views.py|Basket|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|admin.py|Blog|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|apps.py|Blog|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|forms.py|Blog|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|models.py|Blog|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|urls.py|Blog|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|views.py|Blog|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|admin.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|apps.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|forms.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|models.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|signals.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|urls.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|views.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|webhook_handler.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|webhooks.py|Checkout|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|apps.py|Home|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|urls.py|Home|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|views.py|Home|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|admin.py|Products|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|apps.py|Products|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|forms.py|Products|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|models.py|Products|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|urls.py|Products|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|views.py|Products|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|widgets.py|Products|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|apps.py|Profiles|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|forms.py|Profiles|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|models.py|Profiles|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|urls.py|Profiles|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+|views.py|Profiles|Pass with no errors|Python code passed through CI Python Linter|No Errors|Pass|
+
+### Device & Browser Testing
+
+#### Responsive Device Testing
+Manual testing was conducted on the following devices:
+- MacBook Air M2
+- Apple iPad Pro 3rd Gen
+- Apple iPhone 12 Pro Max
+
+#### Browser Compatibility
+The site has been tested on the following browsers:
+- Google Chrome (Official Build) (64-bit)
+- Microsoft Edge
+- Mozilla Firefox
+- Google Chrome Developer Tools to simulate multiple different device screen sizes
 
 ---
 ## Deployment
@@ -410,7 +507,7 @@ All images were taken from [pexels.com](https://pexels.com/)
 I constructed the product names and descriptions myself, while taking the photos from [pexels.com](https://pexels.com/) to accompany them.
 
 ### Acknowledgements
-My mentor Mitko for his continued support
-The Code Institute for their guidance 
-Slack teams for the continued troubleshooting
-The tutorship team for their guidance on any problems I have had. 
+- My mentor Mitko for his continued support
+- The Code Institute for their guidance 
+- Slack teams for the continued troubleshooting
+- The tutor team for their guidance on any problems I have had
