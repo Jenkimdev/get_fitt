@@ -316,3 +316,27 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 }
+
+/* Styling for reviews page */
+.testimonials_area {
+    font-family: lato;
+    margin-top: 30px;
+    text-align: center;
+    
+}
+
+hr {
+    width: 75%;
+}
+
+.testimonial_name {
+    font-weight: bold;
+    color: #077c8e;
+}
+
+.testimonials_title {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 200px;
+}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h2 class="testimonials_title logo-font">Previous Customer Experiences</h2>
+
+<div class="testimonials_area">
+
+    {% for Feedback in feedbacks %}
+        <hr>
+        <div class="testimonial_container">
+            <div class="testimonial_name">{{Feedback.name }}</div>
+            <div>Rating: {{Feedback.rating }} out of 5</div>
+            <div>Message: {{Feedback.message }}</div>
+        </div>
+    {% endfor %}
+    <hr>
+</div>
+
+{% endblock %}
