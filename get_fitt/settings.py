@@ -27,10 +27,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY_VALUE', 'x')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
+    '8000-jenkimdev-getfitt-liloxwq1g38.ws-eu115.gitpod.io',
     'get-fitt-c5544b6e6a49.herokuapp.com', '8000-jenkimdev-getfitt-mgvg3sz7ld9.ws-eu110.gitpod.io'
 ]
 

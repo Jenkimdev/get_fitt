@@ -51,6 +51,29 @@
                     <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
+                        
+                    <div class="extra_info">
+                        <div class="form-row">
+                            {% if product.is_vegan %}
+                                 <div class="vegan">
+                                    <div>VEGAN</div>
+                                 </div>    
+                            {% endif %}
+                        </div>
+
+                        <div class="form-row">
+                            <div class="best_for">Best for {{ product.best_for }}</div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="material">Material: {{ product.material }}</div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="season"> Season: {{ product.season }}</div>
+                        </div>
+                    </div>
+                           
                         <div class="form-row">
                             {% with product.has_sizes as s %}
                             {% if s %}

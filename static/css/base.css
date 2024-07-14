@@ -286,6 +286,26 @@ input[name='q']::placeholder {
     }
 }
 
+/* Vegan Tag */
+.vegan {
+    color:green;
+}
+
+/* Best for Tag */
+.best_for {
+    color:red;
+}
+/* Material */
+
+.material {
+    color:blue;
+}
+
+/* Season */
+.season {
+    color:orange;
+}
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
