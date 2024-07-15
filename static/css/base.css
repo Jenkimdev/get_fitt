@@ -319,6 +319,7 @@ input[name='q']::placeholder {
 
 /* Styling for reviews page */
 .testimonials_area {
+    color: white;
     font-family: lato;
     margin-top: 30px;
     text-align: center;
@@ -327,7 +328,7 @@ input[name='q']::placeholder {
 
 hr {
     width: 75%;
-    color: #959595;
+    color: #e6e6e6;
 }
 
 .testimonial_name {
