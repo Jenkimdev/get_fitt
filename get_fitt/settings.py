@@ -31,8 +31,7 @@ DEBUG = False
 #'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-jenkimdev-getfitt-liloxwq1g38.ws-eu115.gitpod.io',
-    'get-fitt-c5544b6e6a49.herokuapp.com', '8000-jenkimdev-getfitt-mgvg3sz7ld9.ws-eu110.gitpod.io'
+    'get-fitt-c5544b6e6a49.herokuapp.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
